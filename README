@@ -1,0 +1,40 @@
+This might be available only on MacOS.
+After running this script, the HXD and partly XIS data analyses are ready.
+Since you have to create region files when analyzing the XIS data,
+they are just downloaded and waiting for such as "go_xis_pointsource.sh"...
+If you want to skip the PIN or GSO, please set the variable as
+$ export PINDISABLE=1
+$ export GSODISABLE=1
+Please see
+http://www-utheal.phys.s.u-tokyo.ac.jp/~yuasa/wiki/index.php/HongoScripts
+for detailed information.
+
+Usage:
+$ export ObjName="??"
+$ export ObsID="??"
+$ export version="??"
+$ source AutoHongoScript.sh
+
+Environment variable:
+:ObjName
+A name of top folder which is created automatically.
+This must be different from any one in the current directory.
+
+:ObsID
+An Observation ID.
+Please get this from
+http://www.darts.isas.jaxa.jp/astro/suzaku/public_seq.html
+where ObsID is identical to "Sequence No.".
+
+:version
+Please get this from the same URL as ObsID.
+You can know the version by checking the URL which is linked with the "Sequence No."
+like ftp://ftp.darts.isas.jaxa.jp/pub/suzaku/ver???/402053010.
+						here
+
+Example:
+$ export ObjName="AqlX-20070928"
+$ export ObsID="402053010"
+$ export version="2.1"
+$ source AutoHongoScript.sh
+
